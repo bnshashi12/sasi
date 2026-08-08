@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elite Companions — Profile</title>
+<meta name="description" content="Companion profile page.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+<a class="logo" href="index.html">ELITE COMPANIONS</a>
+  <nav><a href="index.html#discover">Discover</a><a href="index.html#cities">Cities</a><a href="index.html#safety">Safety</a><a href="index.html#contact">Contact</a></nav>
+  <button class="btn outline" onclick="openModal()">List a profile</button>
+</header>
+
+<main>
+<section class="profile-page section">
+  <a class="back" href="index.html#discover">← Back to profiles</a>
+  <div id="profileMain"></div>
+  <div class="section-head" style="margin-top:40px"><div><span class="eyebrow">GALLERY</span><h2>Photos</h2></div></div>
+  <div id="profileGallery" class="ggrid"></div>
+</section>
+</main>
+
+<footer>
+<div class="logo">ELITE COMPANIONS</div>
+  <p>© 2026 Elite Companions. Adults 18+ only.</p>
+  <div><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Community Standards</a></div>
+</footer>
+
+<div id="modal" class="modal">
+ <div class="modal-card">
+   <button class="close" onclick="closeModal()">×</button>
+   <span class="eyebrow">PROFILE REQUEST</span><h2>Submit a profile</h2>
+   <form onsubmit="submitForm(event)">
+    <input required placeholder="Display name">
+    <input required type="email" placeholder="Email address">
+    <select required><option value="">Choose city</option><option>Bengaluru</option><option>Mumbai</option><option>Dubai</option><option>London</option></select>
+    <textarea required placeholder="Short profile description"></textarea>
+    <label class="check"><input required type="checkbox"> I confirm I am 18+ and agree to the community standards.</label>
+    <button class="btn primary">Send for review</button>
+   </form>
+ </div>
+</div>
+<script src="script.js"></script>
+</body></html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elite Companions — Private Companionship</title>
+<meta name="description" content="A discreet adult companionship directory with verified profiles and city-based discovery.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="ageGate" class="gate">
+  <div class="gate-card">
+<div class="logo">ELITE COMPANIONS</div>
+    <h1>Adults only</h1>
+    <p>This website is intended for adults aged 18 and over. By entering, you confirm that you are at least 18 and agree to our terms.</p>
+    <button id="enterBtn" class="btn primary">I am 18+ — Enter</button>
+    <a href="#" class="leave">Leave site</a>
+  </div>
+</div>
+
+<header class="header">
+<a class="logo" href="#">ELITE COMPANIONS</a>
+  <nav><a href="#discover">Discover</a><a href="#cities">Cities</a><a href="#safety">Safety</a><a href="#contact">Contact</a></nav>
+  <button class="btn outline" onclick="openModal()">List a profile</button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">PRIVATE • VERIFIED • DISCREET</span>
+    <h1>Meet people.<br><em>Share experiences.</em></h1>
+    <p>A modern directory for discovering verified adult companions in supported locations.</p>
+    <div class="search">
+      <input id="searchInput" placeholder="Search by city or profile name">
+      <button class="btn primary" onclick="searchProfiles()">Search</button>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="orb"></div>
+    <span>VERIFIED COMMUNITY</span>
+    <strong>Private by design.</strong>
+    <p>Profile verification, reporting tools and clear community standards.</p>
+  </div>
+</section>
+
+<section id="discover" class="section">
+  <div class="section-head"><div><span class="eyebrow">DISCOVER</span><h2>Featured profiles</h2></div><select id="cityFilter" onchange="renderProfiles()"><option value="">All cities</option><option>Bengaluru</option><option>Mumbai</option><option>Dubai</option><option>London</option></select></div>
+  <div id="profiles" class="grid"></div>
+</section>
+
+<section id="cities" class="section soft">
+  <div class="section-head"><div><span class="eyebrow">EXPLORE</span><h2>Popular cities</h2></div></div>
+  <div class="cities">
+    <button onclick="setCity('Bengaluru')">Bengaluru <span>→</span></button>
+    <button onclick="setCity('Mumbai')">Mumbai <span>→</span></button>
+    <button onclick="setCity('Dubai')">Dubai <span>→</span></button>
+    <button onclick="setCity('London')">London <span>→</span></button>
+  </div>
+</section>
+
+<section id="safety" class="section safety">
+  <span class="eyebrow">SAFETY FIRST</span>
+  <h2>Built around trust and discretion.</h2>
+  <div class="safety-grid">
+    <div><b>✓</b><h3>Profile verification</h3><p>Use verification workflows before publishing profiles.</p></div>
+    <div><b>✓</b><h3>Report & block</h3><p>Give visitors clear tools to report suspicious or abusive behaviour.</p></div>
+    <div><b>✓</b><h3>Privacy controls</h3><p>Minimise personal information and protect account data.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="cta">
+  <div><span class="eyebrow">GET STARTED</span><h2>Want to create a profile?</h2><p>Submit your details for review. Profiles are published only after moderation.</p></div>
+  <button class="btn light" onclick="openModal()">Request listing</button>
+</section>
+</main>
+
+<footer>
+<div class="logo">ELITE COMPANIONS</div>
+  <p>© 2026 Elite Companions. Adults 18+ only.</p>
+  <div><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Community Standards</a></div>
+</footer>
+
+<div id="modal" class="modal">
+ <div class="modal-card">
+   <button class="close" onclick="closeModal()">×</button>
+   <span class="eyebrow">PROFILE REQUEST</span><h2>Submit a profile</h2>
+   <form onsubmit="submitForm(event)">
+    <input required placeholder="Display name">
+    <input required type="email" placeholder="Email address">
+    <select required><option value="">Choose city</option><option>Bengaluru</option><option>Mumbai</option><option>Dubai</option><option>London</option></select>
+    <textarea required placeholder="Short profile description"></textarea>
+    <label class="check"><input required type="checkbox"> I confirm I am 18+ and agree to the community standards.</label>
+    <button class="btn primary">Send for review</button>
+   </form>
+ </div>
+</div>
+
+<div id="galleryModal" class="gallery">
+ <div class="gallery-card">
+   <button class="close" onclick="closeGallery()">×</button>
+   <span class="eyebrow">PHOTO GALLERY</span>
+   <h2 id="galleryTitle"></h2>
+   <div id="galleryGrid" class="ggrid"></div>
+ </div>
+</div>
+<script src="script.js"></script>
+</body></html>
