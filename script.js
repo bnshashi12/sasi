@@ -19,6 +19,7 @@ const profiles=[
 {name:'Kirann',title:'Bubbly Companion in Koramangala, Bengaluru',city:'Bengaluru',area:'Koramangala',age:23,initial:'K',verified:true,img:'img/profiles/kirann.png',gallery:'img/galleries/kirann',pages:24,about:'Bubbly and down to earth. Enjoy movies, long drives and good food with even better company.',likes:['Movies','Road trips','Food','Fitness']},
 {name:'Sara',title:'Elegant Companion in T. Nagar, Chennai',city:'Chennai',area:'T. Nagar',age:28,initial:'S',verified:true,img:'img/profiles/sara.png',gallery:'img/galleries/sara',pages:34,about:'Elegant, charismatic and well-spoken. Interested in culture, theatre and quiet evenings with class.',likes:['Theatre','Culture','Wine','Reading']},
 {name:'Selena',title:'Charming Companion in Park Street, Kolkata',city:'Kolkata',area:'Park Street',age:25,initial:'S',verified:true,img:'img/profiles/selena.png',gallery:'img/galleries/selena',pages:32,about:'Charming and graceful with an eye for style. Love beach clubs, shopping and lively conversations.',likes:['Beach clubs','Shopping','Style','Parties']},
+{name:'Sushmita',title:'Stunning Companion in Marathahalli, Bengaluru',city:'Bengaluru',area:'Marathahalli',age:25,initial:'S',verified:true,img:'img/profiles/sushmita.png',gallery:'img/galleries/sushmita',pages:4,about:'Stunning and confident with a magnetic presence. I enjoy luxury dinners, travel and unforgettable evenings in good company.',likes:['Luxury','Travel','Dining','Conversation']},
 ];
 
 function renderProfiles(list=profiles){
@@ -70,7 +71,20 @@ function setArea(city,area){
 
 function openModal(){const m=document.getElementById('modal');if(m)m.style.display='flex'}
 function closeModal(){const m=document.getElementById('modal');if(m)m.style.display='none'}
-function submitForm(e){e.preventDefault();alert('Thanks. Your profile request has been submitted for moderation.');closeModal();e.target.reset()}
+var FORM_EMAIL='elitecompanionsgbl@gmail.com';
+function submitForm(e){
+ e.preventDefault();
+ const name=(document.getElementById('fName')||{}).value||'';
+ const from=(document.getElementById('fEmail')||{}).value||'';
+ const city=(document.getElementById('fCity')||{}).value||'';
+ const desc=(document.getElementById('fDesc')||{}).value||'';
+ const subject='New profile listing request';
+ const body='New profile listing request via Elite Companions:\n\nName: '+name+'\nContact email: '+from+'\nCity: '+city+'\nDescription: '+desc;
+ location.href='mailto:'+FORM_EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+ alert('Thanks! Your email app will open to send your profile request to us for review.');
+ closeModal();
+ if(e.target&&e.target.reset)e.target.reset();
+}
 
 // Profile detail page rendering
 function renderProfilePage(){

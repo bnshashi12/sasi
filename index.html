@@ -152,12 +152,12 @@
  <div class="modal-card">
    <button class="close" onclick="closeModal()">×</button>
    <span class="eyebrow">PROFILE REQUEST</span><h2>Submit a profile</h2>
-   <form onsubmit="submitForm(event)">
-    <input required placeholder="Display name">
-    <input required type="email" placeholder="Email address">
-    <select required><option value="">Choose city</option><option>Bengaluru</option><option>Mumbai</option><option>Chennai</option><option>Kolkata</option><option>Goa</option><option>Dubai</option></select>
-    <textarea required placeholder="Short profile description"></textarea>
-    <label class="check"><input required type="checkbox"> I confirm I am 18+ and agree to the community standards.</label>
+   <form id="profileForm" onsubmit="submitForm(event)">
+    <input id="fName" name="name" required placeholder="Display name">
+    <input id="fEmail" name="email" required type="email" placeholder="Email address">
+    <select id="fCity" name="city" required><option value="">Choose city</option><option>Bengaluru</option><option>Mumbai</option><option>Chennai</option><option>Kolkata</option><option>Goa</option><option>Dubai</option></select>
+    <textarea id="fDesc" name="description" required placeholder="Short profile description"></textarea>
+    <label class="check"><input type="checkbox" required> I confirm I am 18+ and agree to the community standards.</label>
     <button class="btn primary">Send for review</button>
    </form>
  </div>
