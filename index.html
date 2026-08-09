@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Elite Companions — Private Companionship</title>
-<meta name="description" content="A discreet adult companionship directory with verified profiles and city-based discovery.">
+<title>Elite Companions — Elite Companion Profiles in Bengaluru, Mumbai, Chennai, Kolkata, Goa & Dubai</title>
+<meta name="description" content="Discover verified elite companion profiles across Bengaluru, Mumbai, Chennai, Kolkata, Goa and Dubai. Explore by city and area, with discreet contact via WhatsApp, call or email.">
+<meta name="keywords" content="elite companions Bengaluru, companion Indiranagar, elite companion Mumbai Bandra, companion Chennai, companion Kolkata, elite companion Goa, escort companionship, verified companions India">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,7 +21,7 @@
 
 <header class="header">
 <a class="logo" href="#">ELITE COMPANIONS</a>
-  <nav><a href="#discover">Discover</a><a href="#cities">Cities</a><a href="#safety">Safety</a><a href="#contact">Contact</a></nav>
+  <nav><a href="#discover">Discover</a><a href="#explore">Explore by City</a><a href="#cities">Cities</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
   <button class="btn outline" onclick="openModal()">List a profile</button>
 </header>
 
@@ -29,9 +30,9 @@
   <div class="hero-copy">
     <span class="eyebrow">PRIVATE • VERIFIED • DISCREET</span>
     <h1>Meet people.<br><em>Share experiences.</em></h1>
-    <p>A modern directory for discovering verified adult companions in supported locations.</p>
+    <p>A modern directory for discovering verified elite companions across Bengaluru, Mumbai, Chennai, Kolkata, Goa and Dubai.</p>
     <div class="search">
-      <input id="searchInput" placeholder="Search by city or profile name">
+      <input id="searchInput" placeholder="Search by city, area or profile name">
       <button class="btn primary" onclick="searchProfiles()">Search</button>
     </div>
   </div>
@@ -44,17 +45,41 @@
 </section>
 
 <section id="discover" class="section">
-  <div class="section-head"><div><span class="eyebrow">DISCOVER</span><h2>Featured profiles</h2></div><select id="cityFilter" onchange="renderProfiles()"><option value="">All cities</option><option>Bengaluru</option><option>Mumbai</option><option>Dubai</option><option>London</option></select></div>
+  <div class="section-head"><div><span class="eyebrow">DISCOVER</span><h2>Featured profiles</h2></div>
+    <div class="filters">
+      <select id="cityFilter" onchange="setCity(this.value)">
+        <option value="">All cities</option>
+        <option>Bengaluru</option><option>Mumbai</option><option>Chennai</option>
+        <option>Kolkata</option><option>Goa</option><option>Dubai</option>
+      </select>
+      <select id="areaFilter" onchange="renderProfiles()"><option value="">All areas</option></select>
+    </div>
+  </div>
   <div id="profiles" class="grid"></div>
 </section>
 
-<section id="cities" class="section soft">
-  <div class="section-head"><div><span class="eyebrow">EXPLORE</span><h2>Popular cities</h2></div></div>
+<section id="explore" class="section soft">
+  <div class="section-head"><div><span class="eyebrow">EXPLORE BY AREA</span><h2>Find a companion near you</h2></div></div>
+  <div class="city-tabs">
+    <button class="active" onclick="exploreCity('Bengaluru',this)">Bengaluru</button>
+    <button onclick="exploreCity('Mumbai',this)">Mumbai</button>
+    <button onclick="exploreCity('Chennai',this)">Chennai</button>
+    <button onclick="exploreCity('Kolkata',this)">Kolkata</button>
+    <button onclick="exploreCity('Goa',this)">Goa</button>
+    <button onclick="exploreCity('Dubai',this)">Dubai</button>
+  </div>
+  <div class="area-wrap"><div id="areaBoard" class="area-grid"></div></div>
+</section>
+
+<section id="cities" class="section">
+  <div class="section-head"><div><span class="eyebrow">POPULAR CITIES</span><h2>Browse by city</h2></div></div>
   <div class="cities">
     <button onclick="setCity('Bengaluru')">Bengaluru <span>→</span></button>
     <button onclick="setCity('Mumbai')">Mumbai <span>→</span></button>
+    <button onclick="setCity('Chennai')">Chennai <span>→</span></button>
+    <button onclick="setCity('Kolkata')">Kolkata <span>→</span></button>
+    <button onclick="setCity('Goa')">Goa <span>→</span></button>
     <button onclick="setCity('Dubai')">Dubai <span>→</span></button>
-    <button onclick="setCity('London')">London <span>→</span></button>
   </div>
 </section>
 
@@ -68,15 +93,58 @@
   </div>
 </section>
 
+<section id="about" class="section about-seo">
+  <span class="eyebrow">ABOUT</span>
+  <h2>About Elite Companions</h2>
+  <h3>A Better Way to Find Genuine Companionship</h3>
+  <p>Finding the right companion should feel simple, comfortable, and private.</p>
+  <p><strong>Elite Companions</strong> is a modern platform created for people looking for genuine companionship, meaningful conversations, social outings, dinner dates, and memorable time together. We bring profiles together in one place so you can take your time, learn about different companions, and choose someone who feels right for you.</p>
+  <p>We believe a good experience starts with <strong>clear communication, mutual respect, and privacy</strong>.</p>
+  <p>There is no need to rush your decision. Browse the profiles, understand what each companion offers, and reach out when you find someone you'd like to know better.</p>
+
+  <h3>Why Choose Elite Companions?</h3>
+
+  <h4>Real Profiles, Better Choices</h4>
+  <p>Everyone has different preferences. That's why we focus on giving you enough information to make an informed choice instead of simply showing you a long list of profiles.</p>
+  <p>Explore different personalities, interests, locations, and availability to find a companion who matches what you're looking for. Whether you're searching for an elite companion in Bengaluru, a verified companion in Mumbai, or a charismatic companion in Goa, our curated directory helps you discover someone who truly fits your style.</p>
+
+  <h4>Privacy Comes First</h4>
+  <p>We understand that companionship can be personal. Your privacy matters to us.</p>
+  <p>We aim to keep communication discreet and straightforward, without unnecessary questions or complicated processes. Your personal information should be handled with care, and every interaction should begin with mutual respect.</p>
+
+  <h4>Simple &amp; Direct Communication</h4>
+  <p>Nobody likes going through a complicated booking process.</p>
+  <p>Once you find a profile that interests you, you can make an inquiry directly and discuss the details before making any arrangements. With one tap you can reach a companion on WhatsApp, place a call, or send a private email. Clear communication helps avoid misunderstandings and makes the experience more comfortable for everyone.</p>
+
+  <h4>Companionship That Fits Your Plans</h4>
+  <p>Sometimes you're looking for someone to join you for dinner. Sometimes it's a social event, a conversation over coffee, a city outing, or simply good company after a long week in busy places like Indiranagar, Bandra, T. Nagar, Park Street, Calangute or downtown Dubai.</p>
+  <p>Whatever the occasion, our platform makes it easier to discover companions who may fit your plans and preferences across all the areas and cities we serve.</p>
+
+  <h4>Respect Goes Both Ways</h4>
+  <p>We believe every interaction should be based on <strong>consent, boundaries, honesty, and respect</strong>.</p>
+  <p>Our platform is designed to connect adults who are comfortable communicating their expectations openly. No pressure, no assumptions—just clear communication between people who choose to connect.</p>
+
+  <h3>Find Someone You'd Like to Meet</h3>
+  <p>Your ideal companion may be closer than you think.</p>
+  <p>Take a look through our available profiles, explore different personalities and locations, and see who catches your attention. From Bengaluru to Mumbai, Chennai, Kolkata, Goa and Dubai, we connect you with verified, discreet companionship wherever you are.</p>
+  <p>When you find someone you're interested in, simply send an inquiry and start the conversation.</p>
+  <p><strong>Take your time. Choose someone who feels right.</strong></p>
+  <h3>Your privacy. Your choice. Your experience.</h3>
+  <p>Browse the profiles and discover your next companion today. Reach us anytime at <a href="mailto:elitecompanionsgbl@gmail.com">elitecompanionsgbl@gmail.com</a> or call <a href="tel:+919845700129">+919845700129</a>.</p>
+</section>
+
 <section id="contact" class="cta">
   <div><span class="eyebrow">GET STARTED</span><h2>Want to create a profile?</h2><p>Submit your details for review. Profiles are published only after moderation.</p></div>
-  <button class="btn light" onclick="openModal()">Request listing</button>
+  <div class="cta-btns">
+    <a class="btn light" href="mailto:elitecompanionsgbl@gmail.com">✉️ Email us</a>
+    <button class="btn light" onclick="openModal()">Request listing</button>
+  </div>
 </section>
 </main>
 
 <footer>
 <div class="logo">ELITE COMPANIONS</div>
-  <p>© 2026 Elite Companions. Adults 18+ only.</p>
+  <p>© 2026 Elite Companions. Adults 18+ only.<br><a href="mailto:elitecompanionsgbl@gmail.com">elitecompanionsgbl@gmail.com</a></p>
   <div><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Community Standards</a></div>
 </footer>
 
@@ -87,7 +155,7 @@
    <form onsubmit="submitForm(event)">
     <input required placeholder="Display name">
     <input required type="email" placeholder="Email address">
-    <select required><option value="">Choose city</option><option>Bengaluru</option><option>Mumbai</option><option>Dubai</option><option>London</option></select>
+    <select required><option value="">Choose city</option><option>Bengaluru</option><option>Mumbai</option><option>Chennai</option><option>Kolkata</option><option>Goa</option><option>Dubai</option></select>
     <textarea required placeholder="Short profile description"></textarea>
     <label class="check"><input required type="checkbox"> I confirm I am 18+ and agree to the community standards.</label>
     <button class="btn primary">Send for review</button>

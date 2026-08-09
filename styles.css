@@ -51,8 +51,30 @@ a{text-decoration:none;color:inherit}
 .safety-grid div{padding:28px;border:1px solid #e8e1db;border-radius:18px}
 .safety-grid b{font-size:22px}
 .safety-grid p{color:#777}
-.cta{margin:40px 8% 80px;padding:60px;border-radius:28px;background:#28232a;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.cta{margin:40px 8% 80px;padding:60px;border-radius:28px;background:#28232a;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px}
 .cta p{color:#c9c1c9}
+.cta-btns{display:flex;gap:12px;flex-wrap:wrap}
+.cta .btn.light{color:#201c23}
+.btn.green.mail{background:#d43a5a}
+.filters{display:flex;gap:10px}
+.filters select{min-width:150px}
+
+/* Explore by area */
+.city-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.city-tabs button{border:1px solid #ddd5ce;background:#fff;padding:11px 18px;border-radius:999px;cursor:pointer;font-weight:700;font-size:14px;color:#5f5954}
+.city-tabs button.active{background:#201c23;color:#fff;border-color:#201c23}
+.area-wrap{background:#fff;border:1px solid #e8e1db;border-radius:18px;padding:24px}
+.area-grid{display:flex;flex-wrap:wrap;gap:10px}
+.area-chip{border:1px solid #e1d9d2;background:#fbf9f7;padding:10px 16px;border-radius:999px;cursor:pointer;font-weight:600;font-size:14px;color:#6b5a50;transition:.2s}
+.area-chip:hover{background:#201c23;color:#fff;border-color:#201c23}
+
+/* About / SEO content */
+.about-seo{max-width:900px;margin:0 auto;background:#fff}
+.about-seo h2{font-size:42px;margin:8px 0}
+.about-seo h3{font-size:28px;color:#2a222b;margin:28px 0 8px}
+.about-seo h4{font-size:19px;color:#a83279;margin:22px 0 6px}
+.about-seo p{font-size:16px;line-height:1.85;color:#5f5954}
+.about-seo a{color:#a83279;font-weight:600}
 footer{padding:35px 8%;display:flex;justify-content:space-between;border-top:1px solid #e8e2dc;font-size:13px;color:#777}
 footer div:last-child{display:flex;gap:20px}
 .gate{position:fixed;inset:0;background:#201c23ee;z-index:20;display:flex;align-items:center;justify-content:center;padding:20px}
@@ -102,6 +124,9 @@ footer div:last-child{display:flex;gap:20px}
   .profile-hero{grid-template-columns:1fr}
   .cta{margin:20px 6% 50px;display:block}
   .cta .btn{margin-top:20px}
+  .filters{flex-direction:column}
+  .filters select{width:100%}
+  .about-seo{padding:0 4%}
   footer{display:block}
   footer div:last-child{margin-top:15px}
 }
