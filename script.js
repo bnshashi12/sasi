@@ -130,6 +130,21 @@ const wa=`https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Hi '+p.name+', I 
  box.innerHTML=html;
 }
 
+// Spotlight carousel
+function initSpotlight(){
+  var track=document.getElementById('spotTrack');
+  if(!track)return;
+  var cards=track.children,index=0;
+  var prev=document.getElementById('spotPrev'),next=document.getElementById('spotNext');
+  function go(i){
+    index=(i+cards.length)%cards.length;
+    track.style.transform='translateX(-'+index*100+'%)';
+  }
+  if(prev)prev.onclick=function(ev){ev.preventDefault();go(index-1)};
+  if(next)next.onclick=function(ev){ev.preventDefault();go(index+1)};
+  setInterval(function(){go(index+1)},6000);
+}
+
 var enterBtn=document.getElementById('enterBtn'),ageGate=document.getElementById('ageGate');
 if(enterBtn)enterBtn.onclick=function(){ageGate.classList.add('hidden');sessionStorage.setItem('ageConfirmed','1');return false;};
 if(document.getElementById('profileMain')){
@@ -138,6 +153,7 @@ if(document.getElementById('profileMain')){
   if(sessionStorage.getItem('ageConfirmed'))ageGate.classList.add('hidden');
   renderProfiles();
   if(document.getElementById('areaFilter'))updateAreaFilter();
-  const firstTab=document.querySelector('.city-tabs button');
+const firstTab=document.querySelector('.city-tabs button');
   if(firstTab)exploreCity('Bengaluru',firstTab);
+  initSpotlight();
 }

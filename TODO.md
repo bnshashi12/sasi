@@ -15,6 +15,14 @@
 ## Connect "List a profile" form to email
 - [x] Configure form submission to send to elitecompanionsgbl@gmail.com (mailto)
 
+## Home page premium sections
+- [x] VIP Spotlight carousel (featured profiles + auto-play + prev/next)
+- [x] Trust bar / stats strip (Verified, Profiles, Cities, Support)
+- [x] How it Works (3-step guide)
+- [x] Why Elite Companions (benefits grid)
+- [x] Client Testimonials
+- [x] Update nav links (Spotlight, How it Works, Why Us)
+
 ## Git
 - [x] Commit changes
 - [x] Push to blackboxai/update
