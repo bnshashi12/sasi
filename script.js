@@ -8,7 +8,9 @@ const AREAS={
   'Mumbai':['Bandra','Andheri','Juhu','Colaba','Worli','Powai','Lower Parel','Malad','Dadar','Goregaon'],
   'Chennai':['T. Nagar','Adyar','Anna Nagar','Velachery','Mylapore','Besant Nagar','OMR','Guindy','Nungambakkam','Thiruvanmiyur'],
   'Kolkata':['Park Street','Salt Lake','Kankurgachi','Ballygunge','New Town','Gariahat','Howrah','Behala','Dumdum','Rajarhat'],
-  'Goa':['Panaji','Calangute','Baga','Vagator','Anjuna','Candolim','Margao','Benaulim','Colva','Morjim']
+'Goa':['Panaji','Calangute','Baga','Vagator','Anjuna','Candolim','Margao','Benaulim','Colva','Morjim'],
+  'Hyderabad':['Banjara Hills','Jubilee Hills','Gachibowli','HITEC City','Madhapur','Kukatpally','Secunderabad','Ameerpet','Begumpet','Kondapur'],
+  'Pune':['Koregaon Park','Kothrud','Viman Nagar','Hinjewadi','Baner','Aundh','Hadapsar','Kalyani Nagar','Camp','Shivajinagar']
 };
 
 const profiles=[
@@ -19,7 +21,11 @@ const profiles=[
 {name:'Kirann',title:'Bubbly Companion in Koramangala, Bengaluru',city:'Bengaluru',area:'Koramangala',age:23,initial:'K',verified:true,img:'img/profiles/kirann.png',gallery:'img/galleries/kirann',pages:24,about:'Bubbly and down to earth. Enjoy movies, long drives and good food with even better company.',likes:['Movies','Road trips','Food','Fitness']},
 {name:'Sara',title:'Elegant Companion in T. Nagar, Chennai',city:'Chennai',area:'T. Nagar',age:28,initial:'S',verified:true,img:'img/profiles/sara.png',gallery:'img/galleries/sara',pages:34,about:'Elegant, charismatic and well-spoken. Interested in culture, theatre and quiet evenings with class.',likes:['Theatre','Culture','Wine','Reading']},
 {name:'Selena',title:'Charming Companion in Park Street, Kolkata',city:'Kolkata',area:'Park Street',age:25,initial:'S',verified:true,img:'img/profiles/selena.png',gallery:'img/galleries/selena',pages:32,about:'Charming and graceful with an eye for style. Love beach clubs, shopping and lively conversations.',likes:['Beach clubs','Shopping','Style','Parties']},
-{name:'Sushmita',title:'Stunning Companion in Marathahalli, Bengaluru',city:'Bengaluru',area:'Marathahalli',age:25,initial:'S',verified:true,img:'img/profiles/sushmita.png',gallery:'img/galleries/sushmita',pages:4,about:'Stunning and confident with a magnetic presence. I enjoy luxury dinners, travel and unforgettable evenings in good company.',likes:['Luxury','Travel','Dining','Conversation']},
+{name:'Sushmita',title:'Stunning Companion in Marathahalli, Bengaluru',city:'Bengaluru',area:'Marathahalli',age:25,initial:'S',verified:true,img:'img/profiles/sushmita.png',gallery:'img/galleries/sushmita',pages:3,about:'Stunning and confident with a magnetic presence. I enjoy luxury dinners, travel and unforgettable evenings in good company.',likes:['Luxury','Travel','Dining','Conversation']},
+{name:'Ria',title:'Playful Companion in Banjara Hills, Hyderabad',city:'Hyderabad',area:'Banjara Hills',age:24,initial:'R',verified:true,img:'img/profiles/ria.png',gallery:'img/galleries/ria',pages:4,about:'Playful and energetic. I love exploring the city, trying new cafés and keeping conversations lively.',likes:['Cafés','Music','Shopping','Travel']},
+{name:'Nisha',title:'Graceful Companion in Koregaon Park, Pune',city:'Pune',area:'Koregaon Park',age:26,initial:'N',verified:true,img:'img/profiles/nisha.png',gallery:'img/galleries/nisha',pages:4,about:'Graceful and well-spoken with a calm, elegant presence. I enjoy art, fine dining and quiet evenings.',likes:['Art','Fine dining','Reading','Wine']},
+{name:'Priya',title:'Enchanting Companion in Jubilee Hills, Hyderabad',city:'Hyderabad',area:'Jubilee Hills',age:25,initial:'P',verified:true,img:'img/profiles/priya.png',gallery:'img/galleries/priya',pages:4,about:'Enchanting and charismatic. I love rooftop dinners, dance and living in the moment.',likes:['Dancing','Rooftops','Dining','Adventure']},
+{name:'Zara',title:'Radiant Companion in Viman Nagar, Pune',city:'Pune',area:'Viman Nagar',age:27,initial:'Z',verified:true,img:'img/profiles/zara.png',gallery:'img/galleries/zara',pages:4,about:'Radiant and sophisticated. I enjoy luxury shopping, travel and elegant conversation.',likes:['Luxury','Travel','Fashion','Conversation']},
 ];
 
 function renderProfiles(list=profiles){
